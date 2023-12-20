@@ -1,0 +1,22 @@
+Lecture on Clustering
+
+https://vimeo.com/148275568
+
+http://www.lisa.stat.vt.edu/sites/default/files/LISA%20Short%20Course%20Series.R
+
+Density Based Clustering
+
+https://www.youtube.com/watch?v=2yxM4zVVwiw
+
+k-medoid & DBSCAN
+
+https://www.youtube.com/watch?v=AxARUMZh0sk
+
+Cluster Analysis in Data Mining tutoreal 31 OPTICS 
+Ordering Points To Identify Clustering Structure 
+https://www.youtube.com/watch?v=WebEVnnDRE4
+
+
+R package demonstration
+
+http://rstatistics.net/cluster-analysis/

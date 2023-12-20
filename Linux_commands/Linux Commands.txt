@@ -1,0 +1,11 @@
+#removal of virtual enviornment
+conda env remove -n ENV_NAME
+
+cd /home/hag5kor/FBI_Testing/
+#Run code in Background
+source ~/.alias
+source activate pythonenv
+nohup python src/post_processing/PostProcessing.py >> C_MSC/post_pross.log &
+
+#to kill the application
+yarn application -kill application_1573459724486_4459
