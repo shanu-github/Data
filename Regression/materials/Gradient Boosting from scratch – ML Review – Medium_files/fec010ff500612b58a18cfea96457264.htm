@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html><head><title>code to find best split based on standard error – Medium</title><meta name="description" content="code to find best split based on standard error"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="twitter:widgets:csp" content="on"><meta name="robots" content="noindex"><!-- base href="https://medium.com/media/fec010ff500612b58a18cfea96457264?postId=1e317ae4587d" --><style>body {text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: "ff-tisa-web-pro", Georgia, Cambria, "Times New Roman", Times, serif; font-weight: 400; color: #333332; font-size: 18px; line-height: 1.4; margin: 0; background-color: white; overflow: hidden;}iframe {max-width: 100%;}</style></head><body><style>.gist .gist-file { margin-bottom: 0 !important; }.gist { text-rendering: auto; }</style><script src="fec010ff500612b58a18cfea96457264_data/5e9d371a29687859adba31ee7e2cc159.js" charset="utf-8"></script><link rel="stylesheet" href="f5bca4f4459ab7fcfbf4c150c40cc315_data/gist-embed-b3b573358bfc66d89e1e95dbf8319c09.css"><div id="gist84017028" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-find_split" class="file">
+    
+
+  <div itemprop="text" class="blob-wrapper data type-text ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-find_split-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-find_split-LC1" class="blob-code blob-code-inner js-file-line">xi = x # initialization of input</td>
+      </tr>
+      <tr>
+        <td id="file-find_split-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-find_split-LC2" class="blob-code blob-code-inner js-file-line">yi = y # initialization of target</td>
+      </tr>
+      <tr>
+        <td id="file-find_split-L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="file-find_split-LC3" class="blob-code blob-code-inner js-file-line"># x,y --&gt; use where no need to change original y</td>
+      </tr>
+      <tr>
+        <td id="file-find_split-L4" class="blob-num js-line-number" data-line-number="4"></td>
+        <td id="file-find_split-LC4" class="blob-code blob-code-inner js-file-line">ei = 0 # initialization of error</td>
+      </tr>
+      <tr>
+        <td id="file-find_split-L5" class="blob-num js-line-number" data-line-number="5"></td>
+        <td id="file-find_split-LC5" class="blob-code blob-code-inner js-file-line">n = len(yi)  # number of rows</td>
+      </tr>
+      <tr>
+        <td id="file-find_split-L6" class="blob-num js-line-number" data-line-number="6"></td>
+        <td id="file-find_split-LC6" class="blob-code blob-code-inner js-file-line">predf = 0 # initial prediction 0</td>
+      </tr>
+      <tr>
+        <td id="file-find_split-L7" class="blob-num js-line-number" data-line-number="7"></td>
+        <td id="file-find_split-LC7" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-find_split-L8" class="blob-num js-line-number" data-line-number="8"></td>
+        <td id="file-find_split-LC8" class="blob-code blob-code-inner js-file-line">for i in range(30): # loop will make 30 trees (n_estimators). </td>
+      </tr>
+      <tr>
+        <td id="file-find_split-L9" class="blob-num js-line-number" data-line-number="9"></td>
+        <td id="file-find_split-LC9" class="blob-code blob-code-inner js-file-line">    tree = DecisionTree(xi,yi) # DecisionTree scratch code can be found in shared github/kaggle link. </td>
+      </tr>
+      <tr>
+        <td id="file-find_split-L10" class="blob-num js-line-number" data-line-number="10"></td>
+        <td id="file-find_split-LC10" class="blob-code blob-code-inner js-file-line">                               # It just create a single decision tree with provided min. sample leaf</td>
+      </tr>
+      <tr>
+        <td id="file-find_split-L11" class="blob-num js-line-number" data-line-number="11"></td>
+        <td id="file-find_split-LC11" class="blob-code blob-code-inner js-file-line">    tree.find_better_split(0)  # For selected input variable, this splits (&lt;n and &gt;n) data so that std. deviation of </td>
+      </tr>
+      <tr>
+        <td id="file-find_split-L12" class="blob-num js-line-number" data-line-number="12"></td>
+        <td id="file-find_split-LC12" class="blob-code blob-code-inner js-file-line">                               # target variable in both splits is minimum as compared to all other splits</td>
+      </tr>
+      <tr>
+        <td id="file-find_split-L13" class="blob-num js-line-number" data-line-number="13"></td>
+        <td id="file-find_split-LC13" class="blob-code blob-code-inner js-file-line">    </td>
+      </tr>
+      <tr>
+        <td id="file-find_split-L14" class="blob-num js-line-number" data-line-number="14"></td>
+        <td id="file-find_split-LC14" class="blob-code blob-code-inner js-file-line">    r = np.where(xi == tree.split)[0][0]   #  finds index where this best split occurs</td>
+      </tr>
+      <tr>
+        <td id="file-find_split-L15" class="blob-num js-line-number" data-line-number="15"></td>
+        <td id="file-find_split-LC15" class="blob-code blob-code-inner js-file-line">    </td>
+      </tr>
+      <tr>
+        <td id="file-find_split-L16" class="blob-num js-line-number" data-line-number="16"></td>
+        <td id="file-find_split-LC16" class="blob-code blob-code-inner js-file-line">    left_idx = np.where(xi &lt;= tree.split)[0] # index lhs of split</td>
+      </tr>
+      <tr>
+        <td id="file-find_split-L17" class="blob-num js-line-number" data-line-number="17"></td>
+        <td id="file-find_split-LC17" class="blob-code blob-code-inner js-file-line">    right_idx = np.where(xi &gt; tree.split)[0] # index rhs of split</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/groverpr/5e9d371a29687859adba31ee7e2cc159/raw/48d79cf35df82c01ef7a4fb254619920e93f1087/find_split" style="float:right">view raw</a>
+        <a href="https://gist.github.com/groverpr/5e9d371a29687859adba31ee7e2cc159#file-find_split">find_split</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+<script>var height = -1; var delayMs = 200;function notifyResize(height) {height = height ? height : document.documentElement.offsetHeight; var resized = false; if (window.donkey && donkey.resize) {donkey.resize(height); resized = true;}if (parent && parent._resizeIframe) {var obj = {iframe: window.frameElement, height: height}; parent._resizeIframe(obj); resized = true;}if (window.location && window.location.hash === "#amp=1" && window.parent && window.parent.postMessage) {window.parent.postMessage({sentinel: "amp", type: "embed-size", height: height}, "*");}if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.resize) {window.webkit.messageHandlers.resize.postMessage(height); resized = true;}return resized;}function maybeResize() {if (document.documentElement.offsetHeight != height && notifyResize()) {height = document.documentElement.offsetHeight;}delayMs = Math.min(delayMs * 2, 1000000); setTimeout(maybeResize, delayMs);}maybeResize();</script></body></html>

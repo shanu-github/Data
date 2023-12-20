@@ -1,0 +1,25 @@
+conda update --all 
+conda install tensorflow
+conda install keras
+conda install imblearn
+
+
+conda install pillow
+conda install h5py
+
+conda config --set ssl_verify no
+conda install -c glemaitre imbalanced-learn
+conda config --set ssl_verify yes
+
+pip install -U imbalanced-learn
+ !pip install imblearn 
+
+conda update imbalanced-learn
+conda install imbalanced-learn=0.3.0 -c glemaitre
+
+conda install imbalanced-learn=0.3.1 -c glemaitre
+
+pip install -U scikit-learn
+git clone https://github.com/scikit-learn-contrib/imbalanced-learn.git
+cd imbalanced-learn
+python setup.py install
