@@ -1,0 +1,5 @@
+weights=c(50,60,45,70,90)
+heights =c(5,5.5,6,7,9)
+stat=data.frame(weights,heights)
+pm = lm(formula=weights~heights,stat)
+summary(pm)

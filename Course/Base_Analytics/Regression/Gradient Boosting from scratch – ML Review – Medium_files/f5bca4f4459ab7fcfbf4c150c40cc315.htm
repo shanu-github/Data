@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html><head><title>plotting prediction and residuals – Medium</title><meta name="description" content="plotting prediction and residuals"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name="twitter:widgets:csp" content="on"><meta name="robots" content="noindex"><!-- base href="https://medium.com/media/f5bca4f4459ab7fcfbf4c150c40cc315?postId=1e317ae4587d" --><style>body {text-rendering: optimizeLegibility; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-family: "ff-tisa-web-pro", Georgia, Cambria, "Times New Roman", Times, serif; font-weight: 400; color: #333332; font-size: 18px; line-height: 1.4; margin: 0; background-color: white; overflow: hidden;}iframe {max-width: 100%;}</style></head><body><style>.gist .gist-file { margin-bottom: 0 !important; }.gist { text-rendering: auto; }</style><script src="f5bca4f4459ab7fcfbf4c150c40cc315_data/763708ee0c93636110e031b23361c83e.js" charset="utf-8"></script><link rel="stylesheet" href="f5bca4f4459ab7fcfbf4c150c40cc315_data/gist-embed-b3b573358bfc66d89e1e95dbf8319c09.css"><div id="gist84018201" class="gist">
+    <div class="gist-file">
+      <div class="gist-data">
+        <div class="js-gist-file-update-container js-task-list-container file-box">
+  <div id="file-visualization" class="file">
+    
+
+  <div itemprop="text" class="blob-wrapper data type-text ">
+      
+<table class="highlight tab-size js-file-line-container" data-tab-size="8">
+      <tbody><tr>
+        <td id="file-visualization-L1" class="blob-num js-line-number" data-line-number="1"></td>
+        <td id="file-visualization-LC1" class="blob-code blob-code-inner js-file-line">    # plotting after prediction</td>
+      </tr>
+      <tr>
+        <td id="file-visualization-L2" class="blob-num js-line-number" data-line-number="2"></td>
+        <td id="file-visualization-LC2" class="blob-code blob-code-inner js-file-line">    xa = np.array(x.x) # column name of x is x </td>
+      </tr>
+      <tr>
+        <td id="file-visualization-L3" class="blob-num js-line-number" data-line-number="3"></td>
+        <td id="file-visualization-LC3" class="blob-code blob-code-inner js-file-line">    order = np.argsort(xa)</td>
+      </tr>
+      <tr>
+        <td id="file-visualization-L4" class="blob-num js-line-number" data-line-number="4"></td>
+        <td id="file-visualization-LC4" class="blob-code blob-code-inner js-file-line">    xs = np.array(xa)[order]</td>
+      </tr>
+      <tr>
+        <td id="file-visualization-L5" class="blob-num js-line-number" data-line-number="5"></td>
+        <td id="file-visualization-LC5" class="blob-code blob-code-inner js-file-line">    ys = np.array(predf)[order]</td>
+      </tr>
+      <tr>
+        <td id="file-visualization-L6" class="blob-num js-line-number" data-line-number="6"></td>
+        <td id="file-visualization-LC6" class="blob-code blob-code-inner js-file-line">    </td>
+      </tr>
+      <tr>
+        <td id="file-visualization-L7" class="blob-num js-line-number" data-line-number="7"></td>
+        <td id="file-visualization-LC7" class="blob-code blob-code-inner js-file-line">    #epreds = np.array(epred[:,None])[order]</td>
+      </tr>
+      <tr>
+        <td id="file-visualization-L8" class="blob-num js-line-number" data-line-number="8"></td>
+        <td id="file-visualization-LC8" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-visualization-L9" class="blob-num js-line-number" data-line-number="9"></td>
+        <td id="file-visualization-LC9" class="blob-code blob-code-inner js-file-line">    f, (ax1, ax2) = plt.subplots(1, 2, sharey=True, figsize = (13,2.5))</td>
+      </tr>
+      <tr>
+        <td id="file-visualization-L10" class="blob-num js-line-number" data-line-number="10"></td>
+        <td id="file-visualization-LC10" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-visualization-L11" class="blob-num js-line-number" data-line-number="11"></td>
+        <td id="file-visualization-LC11" class="blob-code blob-code-inner js-file-line">    ax1.plot(x,y, 'o')</td>
+      </tr>
+      <tr>
+        <td id="file-visualization-L12" class="blob-num js-line-number" data-line-number="12"></td>
+        <td id="file-visualization-LC12" class="blob-code blob-code-inner js-file-line">    ax1.plot(xs, ys, 'r')</td>
+      </tr>
+      <tr>
+        <td id="file-visualization-L13" class="blob-num js-line-number" data-line-number="13"></td>
+        <td id="file-visualization-LC13" class="blob-code blob-code-inner js-file-line">    ax1.set_title(f'Prediction (Iteration {i+1})')</td>
+      </tr>
+      <tr>
+        <td id="file-visualization-L14" class="blob-num js-line-number" data-line-number="14"></td>
+        <td id="file-visualization-LC14" class="blob-code blob-code-inner js-file-line">    ax1.set_xlabel('x')</td>
+      </tr>
+      <tr>
+        <td id="file-visualization-L15" class="blob-num js-line-number" data-line-number="15"></td>
+        <td id="file-visualization-LC15" class="blob-code blob-code-inner js-file-line">    ax1.set_ylabel('y / y_pred')</td>
+      </tr>
+      <tr>
+        <td id="file-visualization-L16" class="blob-num js-line-number" data-line-number="16"></td>
+        <td id="file-visualization-LC16" class="blob-code blob-code-inner js-file-line">
+</td>
+      </tr>
+      <tr>
+        <td id="file-visualization-L17" class="blob-num js-line-number" data-line-number="17"></td>
+        <td id="file-visualization-LC17" class="blob-code blob-code-inner js-file-line">    ax2.plot(x, ei, 'go')</td>
+      </tr>
+      <tr>
+        <td id="file-visualization-L18" class="blob-num js-line-number" data-line-number="18"></td>
+        <td id="file-visualization-LC18" class="blob-code blob-code-inner js-file-line">    ax2.set_title(f'Residuals vs. x (Iteration {i+1})')</td>
+      </tr>
+      <tr>
+        <td id="file-visualization-L19" class="blob-num js-line-number" data-line-number="19"></td>
+        <td id="file-visualization-LC19" class="blob-code blob-code-inner js-file-line">    ax2.set_xlabel('x')</td>
+      </tr>
+      <tr>
+        <td id="file-visualization-L20" class="blob-num js-line-number" data-line-number="20"></td>
+        <td id="file-visualization-LC20" class="blob-code blob-code-inner js-file-line">    ax2.set_ylabel('Residuals')</td>
+      </tr>
+</tbody></table>
+
+
+  </div>
+
+  </div>
+</div>
+
+      </div>
+      <div class="gist-meta">
+        <a href="https://gist.github.com/groverpr/763708ee0c93636110e031b23361c83e/raw/f421e0e1fcdd30227e03bd55a0ef7e5e1ed2ea25/visualization" style="float:right">view raw</a>
+        <a href="https://gist.github.com/groverpr/763708ee0c93636110e031b23361c83e#file-visualization">visualization</a>
+        hosted with ❤ by <a href="https://github.com/">GitHub</a>
+      </div>
+    </div>
+</div>
+<script>var height = -1; var delayMs = 200;function notifyResize(height) {height = height ? height : document.documentElement.offsetHeight; var resized = false; if (window.donkey && donkey.resize) {donkey.resize(height); resized = true;}if (parent && parent._resizeIframe) {var obj = {iframe: window.frameElement, height: height}; parent._resizeIframe(obj); resized = true;}if (window.location && window.location.hash === "#amp=1" && window.parent && window.parent.postMessage) {window.parent.postMessage({sentinel: "amp", type: "embed-size", height: height}, "*");}if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.resize) {window.webkit.messageHandlers.resize.postMessage(height); resized = true;}return resized;}function maybeResize() {if (document.documentElement.offsetHeight != height && notifyResize()) {height = document.documentElement.offsetHeight;}delayMs = Math.min(delayMs * 2, 1000000); setTimeout(maybeResize, delayMs);}maybeResize();</script></body></html>

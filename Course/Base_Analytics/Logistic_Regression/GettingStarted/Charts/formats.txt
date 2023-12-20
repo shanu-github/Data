@@ -1,0 +1,6 @@
+Format	Driver	Notes
+JPG	jpeg	Can be used anywhere, but doesn't resize
+PNG	png	Can be used anywhere, but doesn't resize
+WMF	win.metafile	Windows only; best choice with Word; easily resizable
+PDF	pdf	Best choice with pdflatex; easily resizable
+Postscript	postscript	Best choice with latex and Open Office; easily resizable

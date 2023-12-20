@@ -1,0 +1,11 @@
+##install.packages("dplyr")
+library(dplyr)
+bigdata <- readRDS("D:\\RProgramme\\chicago.rds")
+dim(bigdata)
+str(bigdata)
+subset <- select(bigdata, city:dptp)
+subset
+subset <- select(bigdata, -(city:dptp))
+head(subset)
+subset <- select(bigdata, ends_with("2"))
+head(subset)
