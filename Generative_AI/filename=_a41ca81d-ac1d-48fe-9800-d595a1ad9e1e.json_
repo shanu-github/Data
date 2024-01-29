@@ -1,0 +1,120 @@
+{
+  "Progress": null,
+  "Attachments": true,
+  "NextSteps": null,
+  "VerifiableCredentials": {
+    "docsId": "a41ca81d-ac1d-48fe-9800-d595a1ad9e1e",
+    "userCredentials": []
+  },
+  "Challenges": null,
+  "Certifications": null,
+  "Assessments": null,
+  "Q&A": {
+    "docsId": "a41ca81d-ac1d-48fe-9800-d595a1ad9e1e",
+    "questions": [],
+    "answers": [],
+    "comments": []
+  },
+  "SkillAssessment": null,
+  "XP": {
+    "xp": {
+      "docsId": "a41ca81d-ac1d-48fe-9800-d595a1ad9e1e",
+      "totalXp": 0,
+      "currentLevel": 1,
+      "currentLevelLow": 0,
+      "currentLevelHigh": 1799,
+      "currentLevelPointsEarned": 0,
+      "nextLevel": 2,
+      "pointsUntilNextLevel": 1800,
+      "achievementCategories": {
+        "Unknown": 0,
+        "Modules": 0,
+        "Courses": 0,
+        "Qna": 0,
+        "Challenges": 0,
+        "Events": 0,
+        "LearningPaths": 0,
+        "Special": 0
+      }
+    },
+    "achievements": []
+  },
+  "TechProfile": {
+    "email": "Shanu.Agrawal@cognizant.com",
+    "locale": "en-us",
+    "country": "IN",
+    "contactPointTopicSetting": "OptInExplicit",
+    "isInstructor": false,
+    "isChallengeAdmin": false,
+    "isQnaModerator": false,
+    "source": "docs",
+    "authenticationModes": [
+      {
+        "id": "d6252c4c-5fce-48bf-bc82-8ec3083e08e4",
+        "type": "AAD",
+        "tenantId": "de08c407-19b9-427d-9fe8-edf254300ca7",
+        "upn": "2329791@cognizant.com",
+        "oid": "d6252c4c-5fce-48bf-bc82-8ec3083e08e4",
+        "dateAcceptedPrivacyNotice": "2024-01-24T07:39:55.7902742+00:00",
+        "dateAdded": "2024-01-24T07:39:55.7902742+00:00"
+      },
+      {
+        "id": "0003BFFDC94D8069",
+        "type": "MSA",
+        "tenantId": "9188040d-6c67-4c5b-b112-36a304b66dad",
+        "upn": "shanuagrawal1991@gmail.com",
+        "oid": "00000000-0000-0000-a24d-a65c5c8f289b",
+        "dateAcceptedPrivacyNotice": "2024-01-24T07:40:53.9801902+00:00",
+        "dateAdded": "2024-01-24T07:40:53.9801909+00:00"
+      }
+    ],
+    "transcriptSettings": {
+      "publicLink": {
+        "showModules": true,
+        "showLegalName": true,
+        "showMCID": true,
+        "showContactEmail": true
+      },
+      "print": {
+        "showModules": true,
+        "showLegalName": true,
+        "showMCID": true,
+        "showContactEmail": true
+      }
+    },
+    "certificationSettings": {
+      "print": {
+        "showLegalName": true,
+        "showMCID": true,
+        "showContactEmail": true
+      }
+    },
+    "qnaEmailPreferences": {
+      "allEmail": true,
+      "autoFollowAsked": true,
+      "autoFollowAnswered": true,
+      "autoFollowCommented": true,
+      "autoFollowTagged": false,
+      "emailEventSettings": {
+        "newMention": "instant",
+        "newModeration": "instant",
+        "answerPosted": "instant",
+        "answerAccepted": "instant",
+        "commentPosted": "instant",
+        "newPrivateMessage": "instant"
+      }
+    },
+    "sharingId": "F84E900DDAA3802F",
+    "userId": "a41ca81d-ac1d-48fe-9800-d595a1ad9e1e",
+    "userName": "AgrawalShanuCognizant-4532",
+    "displayName": "Agrawal, Shanu (Cognizant)",
+    "isPrivate": false,
+    "affiliations": [],
+    "followerCount": 0,
+    "followingCount": 0,
+    "answersAccepted": 0,
+    "reputationPoints": 0,
+    "createdOn": "1/24/2024 7:39:55 AM"
+  },
+  "Lists": null
+}
